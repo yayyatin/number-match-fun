@@ -1,0 +1,1143 @@
+[
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 1,
+    "number": 2,
+    "timestamp": 1738616951300,
+    "timeFromRoundStart": 828
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 1,
+    "number": 1,
+    "actualSum": 3,
+    "targetSum": 3,
+    "timestamp": 1738616951758,
+    "matchResult": "correct",
+    "timeFromFirstClick": 458
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 1,
+    "number": 2,
+    "timestamp": 1738616952622,
+    "timeFromRoundStart": 2150
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 1,
+    "number": 1,
+    "actualSum": 3,
+    "targetSum": 3,
+    "timestamp": 1738616953118,
+    "matchResult": "correct",
+    "timeFromFirstClick": 496
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 2,
+    "number": 3,
+    "timestamp": 1738616955602,
+    "timeFromRoundStart": 5130
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 2,
+    "number": 1,
+    "actualSum": 4,
+    "targetSum": 4,
+    "timestamp": 1738616956872,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1270
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 2,
+    "number": 2,
+    "timestamp": 1738616957687,
+    "timeFromRoundStart": 7215
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 2,
+    "number": 2,
+    "actualSum": 4,
+    "targetSum": 4,
+    "timestamp": 1738616958152,
+    "matchResult": "correct",
+    "timeFromFirstClick": 465
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 3,
+    "number": 1,
+    "timestamp": 1738616960932,
+    "timeFromRoundStart": 10460
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 3,
+    "number": 4,
+    "actualSum": 5,
+    "targetSum": 5,
+    "timestamp": 1738616961307,
+    "matchResult": "correct",
+    "timeFromFirstClick": 375
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 3,
+    "number": 2,
+    "timestamp": 1738616962148,
+    "timeFromRoundStart": 11676
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 3,
+    "number": 3,
+    "actualSum": 5,
+    "targetSum": 5,
+    "timestamp": 1738616962527,
+    "matchResult": "correct",
+    "timeFromFirstClick": 379
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 2,
+    "timestamp": 1738616965077,
+    "timeFromRoundStart": 14605
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 2,
+    "actualSum": 4,
+    "targetSum": 4,
+    "timestamp": 1738616965987,
+    "matchResult": "correct",
+    "timeFromFirstClick": 910
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 2,
+    "timestamp": 1738616966810,
+    "timeFromRoundStart": 16338
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 3,
+    "actualSum": 5,
+    "targetSum": 4,
+    "timestamp": 1738616967328,
+    "matchResult": "incorrect",
+    "timeFromFirstClick": 518
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 3,
+    "timestamp": 1738616968822,
+    "timeFromRoundStart": 18350
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 2,
+    "actualSum": 5,
+    "targetSum": 4,
+    "timestamp": 1738616969561,
+    "matchResult": "incorrect",
+    "timeFromFirstClick": 739
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 2,
+    "timestamp": 1738616970562,
+    "timeFromRoundStart": 20090
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 2,
+    "actualSum": 4,
+    "targetSum": 4,
+    "timestamp": 1738616971827,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1265
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 3,
+    "timestamp": 1738616972704,
+    "timeFromRoundStart": 22232
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 3,
+    "actualSum": 6,
+    "targetSum": 4,
+    "timestamp": 1738616973211,
+    "matchResult": "incorrect",
+    "timeFromFirstClick": 507
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 3,
+    "timestamp": 1738616974359,
+    "timeFromRoundStart": 23887
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 1,
+    "actualSum": 4,
+    "targetSum": 4,
+    "timestamp": 1738616974848,
+    "matchResult": "correct",
+    "timeFromFirstClick": 489
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 4,
+    "number": 3,
+    "timestamp": 1738616975489,
+    "timeFromRoundStart": 25017
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 4,
+    "number": 1,
+    "actualSum": 4,
+    "targetSum": 4,
+    "timestamp": 1738616975968,
+    "matchResult": "correct",
+    "timeFromFirstClick": 479
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 5,
+    "number": 3,
+    "timestamp": 1738616978710,
+    "timeFromRoundStart": 28238
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 5,
+    "number": 2,
+    "actualSum": 5,
+    "targetSum": 5,
+    "timestamp": 1738616979248,
+    "matchResult": "correct",
+    "timeFromFirstClick": 538
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 5,
+    "number": 3,
+    "timestamp": 1738616979946,
+    "timeFromRoundStart": 29474
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 5,
+    "number": 2,
+    "actualSum": 5,
+    "targetSum": 5,
+    "timestamp": 1738616980312,
+    "matchResult": "correct",
+    "timeFromFirstClick": 366
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 5,
+    "number": 4,
+    "timestamp": 1738616981360,
+    "timeFromRoundStart": 30888
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 5,
+    "number": 1,
+    "actualSum": 5,
+    "targetSum": 5,
+    "timestamp": 1738616981962,
+    "matchResult": "correct",
+    "timeFromFirstClick": 602
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 5,
+    "number": 3,
+    "timestamp": 1738616982800,
+    "timeFromRoundStart": 32328
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 5,
+    "number": 4,
+    "actualSum": 7,
+    "targetSum": 5,
+    "timestamp": 1738616983187,
+    "matchResult": "incorrect",
+    "timeFromFirstClick": 387
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 5,
+    "number": 1,
+    "timestamp": 1738616984276,
+    "timeFromRoundStart": 33804
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 5,
+    "number": 4,
+    "actualSum": 5,
+    "targetSum": 5,
+    "timestamp": 1738616984670,
+    "matchResult": "correct",
+    "timeFromFirstClick": 394
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 6,
+    "number": 4,
+    "timestamp": 1738616987597,
+    "timeFromRoundStart": 37125
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 6,
+    "number": 2,
+    "actualSum": 6,
+    "targetSum": 6,
+    "timestamp": 1738616987911,
+    "matchResult": "correct",
+    "timeFromFirstClick": 314
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 6,
+    "number": 5,
+    "timestamp": 1738616989197,
+    "timeFromRoundStart": 38725
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 6,
+    "number": 1,
+    "actualSum": 6,
+    "targetSum": 6,
+    "timestamp": 1738616989726,
+    "matchResult": "correct",
+    "timeFromFirstClick": 529
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 6,
+    "number": 3,
+    "timestamp": 1738616990587,
+    "timeFromRoundStart": 40115
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 6,
+    "number": 3,
+    "actualSum": 6,
+    "targetSum": 6,
+    "timestamp": 1738616990909,
+    "matchResult": "correct",
+    "timeFromFirstClick": 322
+  },
+  {
+    "type": "firstClick",
+    "level": 1,
+    "round": 6,
+    "number": 4,
+    "timestamp": 1738616991523,
+    "timeFromRoundStart": 41051
+  },
+  {
+    "type": "secondClick",
+    "level": 1,
+    "round": 6,
+    "number": 2,
+    "actualSum": 6,
+    "targetSum": 6,
+    "timestamp": 1738616991862,
+    "matchResult": "correct",
+    "timeFromFirstClick": 339
+  },
+  { "type": "roundStart", "level": 2, "round": 1, "timestamp": 1738616995044 },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 1,
+    "number": 4,
+    "timestamp": 1738616997209,
+    "timeFromRoundStart": 2165
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 1,
+    "number": 3,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738616997691,
+    "matchResult": "correct",
+    "timeFromFirstClick": 482
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 1,
+    "number": 6,
+    "timestamp": 1738616999400,
+    "timeFromRoundStart": 4356
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 1,
+    "number": 1,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738616999799,
+    "matchResult": "correct",
+    "timeFromFirstClick": 399
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 1,
+    "number": 6,
+    "timestamp": 1738617001658,
+    "timeFromRoundStart": 6614
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 1,
+    "number": 1,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617002019,
+    "matchResult": "correct",
+    "timeFromFirstClick": 361
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 1,
+    "number": 5,
+    "timestamp": 1738617003111,
+    "timeFromRoundStart": 8067
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 1,
+    "number": 2,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617004158,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1047
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 2,
+    "number": 6,
+    "timestamp": 1738617006670,
+    "timeFromRoundStart": 11626
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 2,
+    "number": 2,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617007081,
+    "matchResult": "correct",
+    "timeFromFirstClick": 411
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 2,
+    "number": 4,
+    "timestamp": 1738617008729,
+    "timeFromRoundStart": 13685
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 2,
+    "number": 6,
+    "actualSum": 10,
+    "targetSum": 8,
+    "timestamp": 1738617009171,
+    "matchResult": "incorrect",
+    "timeFromFirstClick": 442
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 2,
+    "number": 5,
+    "timestamp": 1738617010928,
+    "timeFromRoundStart": 15884
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 2,
+    "number": 3,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617012830,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1902
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 2,
+    "number": 4,
+    "timestamp": 1738617016291,
+    "timeFromRoundStart": 21247
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 2,
+    "number": 4,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617018302,
+    "matchResult": "correct",
+    "timeFromFirstClick": 2011
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 2,
+    "number": 6,
+    "timestamp": 1738617020432,
+    "timeFromRoundStart": 25388
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 2,
+    "number": 2,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617021162,
+    "matchResult": "correct",
+    "timeFromFirstClick": 730
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 3,
+    "number": 4,
+    "timestamp": 1738617024181,
+    "timeFromRoundStart": 29137
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 3,
+    "number": 5,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617024947,
+    "matchResult": "correct",
+    "timeFromFirstClick": 766
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 3,
+    "number": 6,
+    "timestamp": 1738617026052,
+    "timeFromRoundStart": 31008
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 3,
+    "number": 3,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617026547,
+    "matchResult": "correct",
+    "timeFromFirstClick": 495
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 3,
+    "number": 6,
+    "timestamp": 1738617027826,
+    "timeFromRoundStart": 32782
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 3,
+    "number": 3,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617028266,
+    "matchResult": "correct",
+    "timeFromFirstClick": 440
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 3,
+    "number": 5,
+    "timestamp": 1738617029660,
+    "timeFromRoundStart": 34616
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 3,
+    "number": 4,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617030846,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1186
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 6,
+    "timestamp": 1738617033067,
+    "timeFromRoundStart": 38023
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 1,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617033377,
+    "matchResult": "correct",
+    "timeFromFirstClick": 310
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 1,
+    "timestamp": 1738617034128,
+    "timeFromRoundStart": 39084
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 3,
+    "actualSum": 4,
+    "targetSum": 7,
+    "timestamp": 1738617035231,
+    "matchResult": "incorrect",
+    "timeFromFirstClick": 1103
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 5,
+    "timestamp": 1738617036761,
+    "timeFromRoundStart": 41717
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 2,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617037975,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1214
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 5,
+    "timestamp": 1738617038696,
+    "timeFromRoundStart": 43652
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 2,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617039960,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1264
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 3,
+    "timestamp": 1738617040948,
+    "timeFromRoundStart": 45904
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 4,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617041377,
+    "matchResult": "correct",
+    "timeFromFirstClick": 429
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 3,
+    "timestamp": 1738617042557,
+    "timeFromRoundStart": 47513
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 4,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617042927,
+    "matchResult": "correct",
+    "timeFromFirstClick": 370
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 6,
+    "timestamp": 1738617048759,
+    "timeFromRoundStart": 53715
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 1,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617049447,
+    "matchResult": "correct",
+    "timeFromFirstClick": 688
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 6,
+    "timestamp": 1738617053568,
+    "timeFromRoundStart": 58524
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 1,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617054164,
+    "matchResult": "correct",
+    "timeFromFirstClick": 596
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 4,
+    "number": 4,
+    "timestamp": 1738617054901,
+    "timeFromRoundStart": 59857
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 4,
+    "number": 3,
+    "actualSum": 7,
+    "targetSum": 7,
+    "timestamp": 1738617055535,
+    "matchResult": "correct",
+    "timeFromFirstClick": 634
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 4,
+    "timestamp": 1738617060438,
+    "timeFromRoundStart": 65394
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 4,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617061177,
+    "matchResult": "correct",
+    "timeFromFirstClick": 739
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 6,
+    "timestamp": 1738617061957,
+    "timeFromRoundStart": 66913
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 2,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617062387,
+    "matchResult": "correct",
+    "timeFromFirstClick": 430
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 5,
+    "timestamp": 1738617063189,
+    "timeFromRoundStart": 68145
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 3,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617068679,
+    "matchResult": "correct",
+    "timeFromFirstClick": 5490
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 6,
+    "timestamp": 1738617070928,
+    "timeFromRoundStart": 75884
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 2,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617071995,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1067
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 5,
+    "timestamp": 1738617072629,
+    "timeFromRoundStart": 77585
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 3,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617073056,
+    "matchResult": "correct",
+    "timeFromFirstClick": 427
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 4,
+    "timestamp": 1738617074140,
+    "timeFromRoundStart": 79096
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 4,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617074597,
+    "matchResult": "correct",
+    "timeFromFirstClick": 457
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 5,
+    "timestamp": 1738617075257,
+    "timeFromRoundStart": 80213
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 3,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617075695,
+    "matchResult": "correct",
+    "timeFromFirstClick": 438
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 5,
+    "number": 6,
+    "timestamp": 1738617076236,
+    "timeFromRoundStart": 81192
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 5,
+    "number": 2,
+    "actualSum": 8,
+    "targetSum": 8,
+    "timestamp": 1738617076677,
+    "matchResult": "correct",
+    "timeFromFirstClick": 441
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 6,
+    "timestamp": 1738617079309,
+    "timeFromRoundStart": 84265
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 3,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617083629,
+    "matchResult": "correct",
+    "timeFromFirstClick": 4320
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 6,
+    "timestamp": 1738617084317,
+    "timeFromRoundStart": 89273
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 3,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617085330,
+    "matchResult": "correct",
+    "timeFromFirstClick": 1013
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 4,
+    "timestamp": 1738617086055,
+    "timeFromRoundStart": 91011
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 5,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617086357,
+    "matchResult": "correct",
+    "timeFromFirstClick": 302
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 4,
+    "timestamp": 1738617086980,
+    "timeFromRoundStart": 91936
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 5,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617087315,
+    "matchResult": "correct",
+    "timeFromFirstClick": 335
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 4,
+    "timestamp": 1738617087890,
+    "timeFromRoundStart": 92846
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 5,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617088299,
+    "matchResult": "correct",
+    "timeFromFirstClick": 409
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 5,
+    "timestamp": 1738617088967,
+    "timeFromRoundStart": 93923
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 4,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617089325,
+    "matchResult": "correct",
+    "timeFromFirstClick": 358
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 6,
+    "timestamp": 1738617089836,
+    "timeFromRoundStart": 94792
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 3,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617090347,
+    "matchResult": "correct",
+    "timeFromFirstClick": 511
+  },
+  {
+    "type": "firstClick",
+    "level": 2,
+    "round": 6,
+    "number": 4,
+    "timestamp": 1738617091207,
+    "timeFromRoundStart": 96163
+  },
+  {
+    "type": "secondClick",
+    "level": 2,
+    "round": 6,
+    "number": 5,
+    "actualSum": 9,
+    "targetSum": 9,
+    "timestamp": 1738617091568,
+    "matchResult": "correct",
+    "timeFromFirstClick": 361
+  }
+]
