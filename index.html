@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Number Matching Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sound-control">
+      <button class="sound-toggle bg-music">
+        <span class="music-on">🎵</span>
+        <span class="music-off hidden">🎵</span>
+      </button>
+      <button class="sound-toggle game-sound">
+        <span class="sound-on">🔊</span>
+        <span class="sound-off hidden">🔈</span>
+      </button>
+    </div>
+    <div class="analytics-control">
+      <input
+        type="text"
+        class="organization-name"
+        placeholder="Enter organization..."
+        list="organizations-list"
+      />
+      <datalist id="organizations-list">
+        <!-- Organizations will be populated here -->
+      </datalist>
+      <input type="text" class="group-name" placeholder="Enter group..." />
+      <input
+        type="text"
+        class="player-name"
+        placeholder="Enter player name..."
+      />
+      <button class="start-recording">Start</button>
+      <button class="stop-recording hidden">Stop</button>
+    </div>
+    <div class="game-area">
+      <div id="game-overlay" class="game-overlay">
+        <div class="overlay-message">
+          Please fill in all fields and click Start to begin
+        </div>
+      </div>
+      <div class="game-container">
+        <div class="game-info">
+          <h1>Number Match Fun! 🎮</h1>
+          <div class="target-info">
+            <span>Click on two numbers that add up to </span>
+            <span class="target-number">9</span>
+            <span>! ✨</span>
+          </div>
+        </div>
+        <div class="grid-container"></div>
+        <div class="level-indicator">Level 1</div>
+        <div class="secret-input-container hidden">
+          <input type="text" class="secret-input" placeholder="Enter code..." />
+          <button class="secret-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <a href="/analytics/" class="analytics-link"> Analytics </a>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Main Script -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

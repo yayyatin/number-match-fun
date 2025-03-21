@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Match Analytics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Fredoka", sans-serif;
+      }
+
+      body {
+        background-color: #f5f6fa;
+        padding: 20px;
+      }
+
+      .dashboard-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .player-select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        width: 200px;
+        font-size: 16px;
+      }
+
+      .metric-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .metric-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #2d3436;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .round-stats {
+        display: grid;
+        gap: 10px;
+      }
+
+      .round-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #f8f9fa;
+      }
+
+      .round-label {
+        font-weight: 600;
+        color: #2d3436;
+      }
+
+      .round-value {
+        color: #00b894;
+      }
+
+      .metrics-container {
+        display: grid;
+        gap: 20px;
+      }
+
+      .round-value {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .number-sequence {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .info-icon {
+        color: #666;
+        font-size: 0.9em;
+        cursor: help;
+        position: relative;
+      }
+
+      .info-icon:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        padding: 8px;
+        background: #333;
+        color: white;
+        border-radius: 4px;
+        font-size: 0.8em;
+        white-space: nowrap;
+        z-index: 1;
+        margin-top: 5px;
+      }
+
+      .dashboard-title {
+        margin: 0 0 24px 0;
+        color: #333;
+        font-size: 1.8em;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Make hidden class more specific */
+      .spinner-container.hidden {
+        display: none !important;
+      }
+
+      .players-grid {
+        margin: 20px 0;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 20px;
+      }
+
+      .players-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .players-table th,
+      .players-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+
+      .players-table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .players-table tr {
+        transition: background-color 0.3s ease;
+      }
+
+      .players-table tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      .players-table tr.active {
+        background-color: #e3f2fd;
+      }
+
+      .view-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #3498db;
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+
+      .view-button:hover {
+        color: #2980b9;
+      }
+
+      .view-button i {
+        font-size: 1.2em;
+      }
+
+      .grid-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px 8px 0 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .grid-title {
+        margin: 0;
+        font-size: 1.1em;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .toggle-grid {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #666;
+        padding: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .toggle-grid:hover {
+        color: #333;
+      }
+
+      .toggle-grid i {
+        font-size: 1.2em;
+        transition: transform 0.3s ease;
+      }
+
+      .toggle-grid.collapsed i {
+        transform: rotate(180deg);
+      }
+
+      .grid-content {
+        max-height: 500px;
+        transition: all 0.3s ease-out;
+        overflow: hidden;
+      }
+
+      .grid-content.collapsed {
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .level-selector-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0;
+        padding: 15px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .level-selector-container.hidden {
+        display: none;
+      }
+
+      .level-selector-label {
+        font-weight: 500;
+        color: #333;
+      }
+
+      .level-selector {
+        display: flex;
+        gap: 10px;
+      }
+
+      .level-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #3498db;
+        background: white;
+        color: #3498db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .level-button.active {
+        background: #3498db;
+        color: white;
+      }
+
+      .level-button:hover {
+        transform: scale(1.1);
+      }
+
+      .level-button.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      .passcode-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .passcode-dialog {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .passcode-dialog h2 {
+        margin: 0 0 20px 0;
+        color: #333;
+      }
+
+      #passcode-input {
+        padding: 10px;
+        font-size: 18px;
+        width: 120px;
+        text-align: center;
+        margin-bottom: 15px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        letter-spacing: 4px;
+      }
+
+      #passcode-submit {
+        padding: 10px 20px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      #passcode-submit:hover {
+        background: #2980b9;
+      }
+
+      .error-message {
+        color: #e74c3c;
+        margin: 10px 0 0 0;
+        min-height: 20px;
+      }
+
+      /* Hide the main content initially */
+      .dashboard-container {
+        display: none;
+      }
+
+      .export-button {
+        padding: 10px 20px;
+        background-color: #27ae60;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 28px 0;
+        transition: all 0.3s ease;
+      }
+
+      .export-button:hover {
+        background-color: #219a52;
+        transform: translateY(-2px);
+      }
+
+      .export-button.hidden {
+        display: none;
+      }
+
+      .filters-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .filter-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .filter-group label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .filter-group select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        width: 200px;
+        font-size: 16px;
+      }
+
+      .organizations-grid {
+        margin-bottom: 20px;
+      }
+
+      .delete-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #e74c3c;
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+
+      .delete-button:hover {
+        color: #c0392b;
+      }
+
+      .delete-button i {
+        font-size: 1.2em;
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .metric-card.full-width {
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="passcode-overlay">
+      <div class="passcode-dialog">
+        <h2>Enter Passcode</h2>
+        <input
+          type="password"
+          id="passcode-input"
+          placeholder="Enter passcode"
+          maxlength="4"
+        />
+        <button id="passcode-submit">Submit</button>
+        <p class="error-message"></p>
+      </div>
+    </div>
+
+    <div class="dashboard-container">
+      <h1 class="dashboard-title">Number Match Analytics</h1>
+
+      <div class="filters-container">
+        <div class="filter-group">
+          <label for="org-select">Organization:</label>
+          <select id="org-select">
+            <option value="">Select Organization</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="group-select">Group:</label>
+          <select id="group-select" disabled>
+            <option value="">Select Group</option>
+          </select>
+        </div>
+        <button id="export-excel" class="export-button" disabled>
+          <i class="fas fa-file-excel"></i> Export to Excel
+        </button>
+      </div>
+
+      <div class="organizations-grid">
+        <div class="grid-header">
+          <h2 class="grid-title">Organizations</h2>
+          <button class="toggle-grid collapsed">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+        </div>
+        <div class="grid-content collapsed">
+          <table class="players-table">
+            <thead>
+              <tr>
+                <th>Organization Name</th>
+                <th>Groups</th>
+                <th>Players</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="organizations-list">
+              <!-- Organizations will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="players-grid">
+        <div class="grid-header">
+          <h2 class="grid-title">Player Sessions</h2>
+          <button class="toggle-grid">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+        </div>
+        <div class="grid-content">
+          <table class="players-table">
+            <thead>
+              <tr>
+                <th>Player Name</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="players-list">
+              <!-- Players will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add level selector section -->
+      <div class="level-selector-container hidden">
+        <div class="level-selector-label">Select Level:</div>
+        <div class="level-selector"></div>
+      </div>
+
+      <div class="spinner-container hidden">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="metrics-container hidden">
+        <div class="metric-card full-width">
+          <div class="metric-title">Number Selection Sequence</div>
+          <div class="round-stats" id="number-sequence-stats">
+            <!-- Number sequence stats will be inserted here -->
+          </div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-title">
+              Click Time Stats
+              <span
+                class="info-icon"
+                data-tooltip="Average time taken to click on a number in a round."
+              >
+                <i class="fas fa-info-circle"></i>
+              </span>
+            </div>
+            <div class="round-stats" id="click-time-stats">
+              <!-- Click time stats will be inserted here -->
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-title">
+              Total Time per Round
+              <span
+                class="info-icon"
+                data-tooltip="Total time taken to complete each round (from first click to the last click in a round)."
+              >
+                <i class="fas fa-info-circle"></i>
+              </span>
+            </div>
+            <div class="round-stats" id="total-time-stats">
+              <!-- Total time stats will be inserted here -->
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-card hidden">
+          <div class="metric-title">Time for Successful Matches per Round</div>
+          <div class="round-stats" id="match-time-stats">
+            <!-- Match time stats will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/analytics-init.js"></script>
+  </body>
+</html>
